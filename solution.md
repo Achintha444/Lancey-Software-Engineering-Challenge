@@ -2,7 +2,6 @@
 - Given a string, return the first non-repeating character in it and return its index. If it does not exist, return -1.
 
 ### Solution
-
 ```ts
  function  findFirstNonRepeatingCha(str) {
 	let  strArr  =  str.split("");
@@ -24,3 +23,6 @@
 console.log(findFirstNonRepeatingCha("TTo")); // [ 'o', 2 ]
 console.log(findFirstNonRepeatingCha("TTy programiz.pro")); // [ 'y', 2 ]
 ```
+
+### Thought Process
+- First, I converted the string to an array and used a double loop to check if a non-repeating character exists and return the first one that matches the conditions.
