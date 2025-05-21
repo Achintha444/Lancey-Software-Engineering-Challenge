@@ -4,14 +4,15 @@
  */
 function findFirstNonRepeatingCha(str) {
     let strArr = str.split("");
-
-    strArr.map()
     
     for (let i=0; i<strArr.length; i++) {
         const current = strArr[i];
         let check = true;
+
         for (let j=0; j<strArr.length; j++) {
+
             if (i===j) continue;
+
             if (current === strArr[j]) {
                 check = false;
                 break;

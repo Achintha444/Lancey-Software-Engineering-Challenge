@@ -3,21 +3,27 @@
 
 ### Solution
 ```ts
- function  findFirstNonRepeatingCha(str) {
-	let  strArr  =  str.split("");
-	for (let  i=0; i<strArr.length; i++) {
-		const  current  =  strArr[i];
-		let  check  =  true;
-		for (let  j=0; j<strArr.length; j++) {
-			if (i===j) continue;
-			if (current  ===  strArr[j]) {
-				check  =  false;
-				break;
-			}
-		}
-		if (check) return [current, i];
-	}
-	return  -1;
+function findFirstNonRepeatingCha(str) {
+    let strArr = str.split("");
+    
+    for (let i=0; i<strArr.length; i++) {
+        const current = strArr[i];
+        let check = true;
+
+        for (let j=0; j<strArr.length; j++) {
+
+            if (i===j) continue;
+            
+            if (current === strArr[j]) {
+                check = false;
+                break;
+            }
+        }
+        
+        if (check) return [current, i];
+    }
+    
+    return -1;
 }
 
 console.log(findFirstNonRepeatingCha("TTo")); // [ 'o', 2 ]
@@ -119,7 +125,7 @@ console.log(dominoes([[1,2], [4,1], [2,3]])); // NO
 ### Thought Process
 - First, I created a map to store the adjacency list of each stone and count the number of stones.
 - Then, I checked if the number of stones is even. If it's not, it's impossible to make a chain, so I returned "NO".
-- Next, I used a DFS-based Hierholzer's algorithm to find a valid path.
+- Next, I used a DFS based algorithm to find a valid path.
 - Finally, I checked if the path contains all the stones. If it does, I returned the path in reverse order; otherwise, I returned "NO".
 
 ## Problem 4

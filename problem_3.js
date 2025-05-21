@@ -24,7 +24,7 @@ function dominoes(stones) {
         if (count % 2 !== 0) return "NO";
     }
 
-    // DFS-based Hierholzer’s algorithm to find a valid path
+    // DFS like algorithm to find a valid path
     const used = new Array(stones.length).fill(false);
     const result = [];
 
